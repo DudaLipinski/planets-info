@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Theme from "./css/Theme";
 import GlobalStyles from "./css/GlobalStyles";
 
 import Sidebar from "./components/Sidebar";
 
 function App() {
+  const [planets, setPlanets] = useState({});
+
   return (
     <Theme>
       <GlobalStyles />

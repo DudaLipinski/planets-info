@@ -3,16 +3,17 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    blue: "#112A40",
-    green: "#5ABFA3",
-    rose: "#F2DFA7",
-    orange: "#F2AA52",
-    pink: "#F2916D",
+    blue: "#182c36",
+    blueCharcoal: "#5ABFA3",
+    yellow: "#EAC853",
+    pink: "#FFF4EE",
+    champagnePink: "#F9E4D8",
+    grey: "#899CA2",
   },
   fontSizes: {
-    small: "1em",
-    medium: "2em",
-    large: "3em",
+    small: "16px",
+    medium: "18px",
+    large: "20px",
   },
 };
 
