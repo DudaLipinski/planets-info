@@ -21,12 +21,12 @@ export const MenuWrapper = styled.nav`
   color: ${(props) => props.theme.colors.blue};
 `;
 
-export const ItemMenuWrapper = styled.ul`
+export const MenuItemWrapper = styled.ul`
   list-style: none;
   padding: 0;
 `;
 
-export const ItemMenu = styled.li`
+export const MenuItem = styled.li`
   font-size: ${(props) => props.theme.fontSizes.medium};
 `;
 
