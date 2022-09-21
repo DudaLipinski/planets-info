@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as Styled from "./Sidebar.styles";
+import { Link } from "react-router-dom";
 
 const Menu = (props) => {
   const [expandedItemTitle, setExpandedItemTitle] = useState();
@@ -10,7 +11,7 @@ const Menu = (props) => {
 
     if (!subItems) {
       return (
-        <Styled.MenuItem>
+        <Styled.MenuItem key={title}>
           <b>{title}</b>
         </Styled.MenuItem>
       );
@@ -19,14 +20,17 @@ const Menu = (props) => {
     return (
       <>
         <Styled.MenuItem
+          key={title}
           onClick={() => setExpandedItemTitle(isExpanded ? null : title)}
         >
           <b>{title}</b>
         </Styled.MenuItem>
         {isExpanded ? (
           <Styled.SubItemWrapper>
-            {subItems.map((subItem) => (
-              <Styled.SubItem>{subItem}</Styled.SubItem>
+            {subItems.map((subItem, index) => (
+              <Styled.SubItem key={`${subItem}-${index}`}>
+                <Link to={`planet/${subItem}`}>{subItem}</Link>
+              </Styled.SubItem>
             ))}
           </Styled.SubItemWrapper>
         ) : null}

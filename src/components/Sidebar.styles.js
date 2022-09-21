@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: fixed;
-  width: 300px;
-  height: 100vh;
-  background-color: ${(props) => props.theme.colors.pink};
+  position: initial;
+  height: inherit;
+  width: fit-content;
+  background-color: #ffffff;
   color: ${(props) => props.theme.colors.rose};
 `;
 
 export const Logo = styled.img`
-  width: 85%;
+  width: 300px;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -27,14 +27,18 @@ export const MenuItemWrapper = styled.ul`
 `;
 
 export const MenuItem = styled.li`
+  padding: 20px 0;
   font-size: ${(props) => props.theme.fontSizes.medium};
+  cursor: pointer;
 `;
 
 export const SubItemWrapper = styled.ul`
-  list-style: none;
   padding: 0;
+  list-style: none;
 `;
 
 export const SubItem = styled.li`
+  padding: 10px 0;
   font-size: ${(props) => props.theme.fontSizes.medium};
+  cursor: pointer;
 `;

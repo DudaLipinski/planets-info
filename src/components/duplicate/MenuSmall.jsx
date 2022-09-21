@@ -10,6 +10,7 @@ const Menu = (props) => {
     const isExpanded = expandedItemTitle === menuItem.title;
     return (
       <MenuItem
+        key={menuItem.title}
         onTitleClick={() =>
           setExpandedItemTitle(isExpanded ? null : menuItem.title)
         }
